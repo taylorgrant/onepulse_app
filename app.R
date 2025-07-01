@@ -62,7 +62,13 @@ server <- function(input, output, session) {
     
     # Add crosstab if selected
     if (!is.null(input$crosstab) && input$crosstab != "None") {
-      base_filename <- paste0("table_", question_id, "_by_", input$crosstab, ".png")
+      crosstab_id <- if (stringr::str_detect(input$crosstab, "^Q\\d+")) {
+        stringr::str_extract(input$crosstab, "^Q\\d+")
+      } else {
+        input$crosstab
+      }
+      
+      base_filename <- paste0("table_", question_id, "_by_", crosstab_id, ".png")
     } else {
       base_filename <- paste0("table_", question_id, ".png")
     }
