@@ -1,0 +1,48 @@
+/* Custom Styling for gt() Table */
+.gt_table {
+  border-radius: 8px;  
+  overflow: hidden;     
+  border: 1px solid #ddd;
+}
+
+/* Add zebra striping to rows */
+.gt_table tbody tr:nth-child(odd) {
+  background-color: #f8f9fa;  
+}
+
+/* Header styling */
+.gt_table thead {
+  background-color: #D6E9F8 !important;  
+  font-weight: bold;
+  border-bottom: 2px solid #bcdff5;
+}
+
+/* Styling for footnotes */
+.gt_table .gt_footnote {
+  font-style: italic;
+  color: gray;
+}
+
+/* Add some padding */
+.gt_table td, .gt_table th {
+  padding: 8px;
+}
+
+/* Add dropshadow to tables */
+.gt_table {
+  border-radius: 8px;  /* Optional: Smooth corners */
+}
+
+.gt_table td + td, .gt_table th + th {
+  border-left: 1px solid #eee;
+}
+
+.no-scroll {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.no-scroll * {
+  overflow: hidden !important;
+}
