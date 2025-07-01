@@ -1,0 +1,31 @@
+# RStudio files to ignore
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.Rapp.history
+
+# R package build artifacts (if applicable)
+*.Rcheck/
+*.tar.gz
+NAMESPACE
+man/
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# Cache or temporary files
+*.utf8.md
+*.knit.md
+*_cache/
+*_files/
+cache/
+tmp/
+out/
+
+# VS Code if applicable
+.vscode/
+
+# Ignore renv lockfile if you're not using renv
+# renv.lock
