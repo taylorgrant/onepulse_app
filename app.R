@@ -92,7 +92,7 @@ server <- function(input, output, session) {
   # Generate clean question labels for the dropdown
   clean_question_labels <- reactive({
     req(survey_data()$data)
-    colnames(survey_data()$data) |>  
+    tmp <- colnames(survey_data()$data) |>  
       sapply(function(col) {
         if (str_detect(col, "^Q\\d+ Comments")) return(NA)
         
@@ -108,6 +108,8 @@ server <- function(input, output, session) {
       na.omit() |> 
       unname() |> 
       unique()
+    
+    setdiff(tmp, c("User ID", "Created", "Respondent ID"))
   })
   
   # Render question selector dropdown
