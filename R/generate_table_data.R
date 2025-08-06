@@ -71,7 +71,9 @@ generate_table_data <- function(input, survey_data) {
     "Frequency2" = c("Daily", "Several times a week", "Once a week", "Less than once a week", "Rarely / Never"),
     "Frequency3" = c("All the time", "Often", "Sometimes", "Rarely", "Never"),
     "Likelihood" = c("Very unlikely", "Unlikely", "Neutral", "Likely", "Very likely"),
-    "Confidence" = c("Much more confident", "Somewhat more confident", "About the same", "Somewhat less confident", "Much less confident")
+    "Confidence" = c("Much more confident", "Somewhat more confident", "About the same", "Somewhat less confident", "Much less confident"),
+    "PID" = c("Very Conservative", "Lean Conservative", "Moderate / Middloe of the road", "Lean Liberal", "Very Liberal"),
+    "Likeability" = c("Dislike very much", "Dislike somewhat", "Like Somewhat", "Like very much", "I do not know who this person is.")
   )
 
   eventReactive(input$generate_table, {
