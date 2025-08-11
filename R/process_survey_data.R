@@ -58,11 +58,19 @@ process_survey_data <- function(file_upload) {
           yob < 1981 & yob > 1964 ~ "Gen X",
           yob < 1965 & yob > 1945 ~ "Boomers"
         ),
-        Generation = factor(Generation, levels = c("Gen Z", "Millennials", "Gen X", "Boomers"))
-      ) |> 
+        Generation = factor(Generation, levels = c("Gen Z", "Millennials", "Gen X", "Boomers")),
+        `Age Decile` = dplyr::case_when(
+          `Age range` <= 19 ~ "< 20",
+          `Age range` > 19 & `Age range` <= 29 ~ "20-29",
+          `Age range` > 29 & `Age range` <= 39 ~ "30-39",
+          `Age range` > 39 & `Age range` <= 49 ~ "40-49",
+          `Age range` > 49 & `Age range` <= 59 ~ "50-59",
+          `Age range` > 59 & `Age range` <= 29 ~ "60+",
+        )) |> 
       select(-yob) |> 
       relocate(Cohort, .after = "Age range") |> 
-      relocate(Generation, .after = "Cohort")
+      relocate(Generation, .after = "Cohort") |> 
+      relocate(`Age Decile`, .after = "Generation")
   }
   
   if ("Parent" %in% colnames(data)) {
