@@ -65,7 +65,7 @@ process_survey_data <- function(file_upload) {
           `Age range` > 29 & `Age range` <= 39 ~ "30-39",
           `Age range` > 39 & `Age range` <= 49 ~ "40-49",
           `Age range` > 49 & `Age range` <= 59 ~ "50-59",
-          `Age range` > 59 & `Age range` <= 29 ~ "60+",
+          `Age range` > 59 ~ "60+",
         )) |> 
       select(-yob) |> 
       relocate(Cohort, .after = "Age range") |> 
