@@ -133,7 +133,7 @@ generate_table_data <- function(input, survey_data) {
     "PID" = c(
       "Very Conservative",
       "Lean Conservative",
-      "Moderate / Middloe of the road",
+      "Moderate / Middle of the road",
       "Lean Liberal",
       "Very Liberal"
     ),
