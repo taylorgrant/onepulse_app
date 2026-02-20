@@ -90,7 +90,7 @@ generate_table_data <- function(input, survey_data) {
       "Strongly disagree",
       "Somewhat disagree",
       "Neutral",
-      "Somewaht agree",
+      "Somewhat agree",
       "Strongly Agree"
     ),
     "Familiarity" = c(
