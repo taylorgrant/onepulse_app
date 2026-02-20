@@ -123,6 +123,13 @@ generate_table_data <- function(input, survey_data) {
       "Likely",
       "Very likely"
     ),
+    "Likelihood2" = c(
+      "Very unlikely",
+      "Somewhat unlikely",
+      "Neutral",
+      "Somewhat likely",
+      "Very likely"
+    ),
     "Confidence" = c(
       "Much more confident",
       "Somewhat more confident",
