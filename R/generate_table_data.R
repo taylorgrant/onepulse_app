@@ -86,6 +86,13 @@ generate_table_data <- function(input, survey_data) {
       "Agree a little",
       "Strongly Agree"
     ),
+    "Agreement3" = c(
+      "Strongly disagree",
+      "Somewhat disagree",
+      "Neutral",
+      "Somewaht agree",
+      "Strongly Agree"
+    ),
     "Familiarity" = c(
       "Very unfamiliar",
       "Somewhat unfamiliar",
